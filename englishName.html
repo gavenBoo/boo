@@ -18691,37 +18691,6 @@
     </ul>
 </body>
 <script>
-    function f(arr) {
-        var i;
-        var length = arr.length;
-        var hash = []; //使用哈希数组
-        for (i = 0; i < length; i++) {
-            if (!hash[arr[i]]) hash[arr[i]] = 1; //没有初始化的数组元素为undefined，undefined++为NaN
-            else hash[arr[i]]++;
-        }
-        var max = 0; //最多的次数
-        var maxV; //出现最多的元素
-        var second = 0; //第二多的次数
-        var secondV; //出现第二多的元素
-        hash.forEach(function (item, index) { //forEach函数会跳过空元素
-            if (item > max) {
-                second = max;
-                secondV = maxV;
-                max = item;
-                maxV = index; //用索引来保存原数组的值
-            } else if (item > second) {
-                second = item;
-                secondV = index;
-            }
-        });
-        return {
-            max,
-            maxV,
-            second,
-            secondV
-        };
-    };
-
     function unique1(arr) {
         var hash = [];
         for (var i = 0; i < arr.length; i++) {
