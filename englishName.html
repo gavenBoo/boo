@@ -18734,38 +18734,41 @@
 </script>
 <script>
     var isFrist=true;
-    function showName(){
+    $("#changename").click(function(){
         isFrist=false;
         if(isFrist){
             $('#changename').text("起个英文名字");
         }else{
             $('#changename').text("不好听，换一个");
         }
-    var info = $(".name_show>li")
-    var infoarr = [];
-    for (var i = 0; i < info.length; i++) {
-        var data = info[i].innerHTML
-        infoarr.push(data);
-    }
-    var names = [];
-    var xings = [];
-     var nums=[];
-    for (var i = 0; i < infoarr.length; i++) {
-        var name = infoarr[i].split(' ')[0];
-        var xing = infoarr[i].split(' ')[1];
-        names.push(name);
-        xings.push(xing);
-        var n1=Math.floor(Math.random()*10000);
-        var n2=Math.floor(Math.random()*10000);
-        nums.push(n1,n2);
-    }
-    var namesnum=nums[(Math.floor(Math.random()*(nums.length)))]%(unique1(names).length);
-    var xingsnum=nums[(Math.floor(Math.random()*(nums.length)))]%(unique1(xings).length);
-    // console.log(namesnum);
-    // console.log(xingsnum);
-    // console.log("名字是："+unique1(names)[namesnum]+"姓是："+unique1(xings)[xingsnum]);
-   $("#name").text(unique1(names)[namesnum]+"  "+unique1(xings)[xingsnum] )
-}
+        var info = $(".name_show>li")
+        var infoarr = [];
+        for (var i = 0; i < info.length; i++) {
+            var data = info[i].innerHTML
+            infoarr.push(data);
+        }
+        var names = [];
+        var xings = [];
+        var nums=[];
+        for (var i = 0; i < infoarr.length; i++) {
+            var name = infoarr[i].split(' ')[0];
+            var xing = infoarr[i].split(' ')[1];
+            names.push(name);
+            xings.push(xing);
+            var n1=Math.floor(Math.random()*10000);
+            var n2=Math.floor(Math.random()*10000);
+            nums.push(n1,n2);
+        }
+        var namesnum=nums[(Math.floor(Math.random()*(nums.length)))]%(unique1(names).length);
+        var xingsnum=nums[(Math.floor(Math.random()*(nums.length)))]%(unique1(xings).length);
+        // console.log(namesnum);
+        // console.log(xingsnum);
+        // console.log("名字是："+unique1(names)[namesnum]+"姓是："+unique1(xings)[xingsnum]);
+        $("#name").text(unique1(names)[namesnum]+"  "+unique1(xings)[xingsnum] )
+    })
+
+
+
     /* for(var i=0; i<info.length;i++){
      	 var data=info[i].innerHTML；
      	 var name1=data.split(' ')[0];
