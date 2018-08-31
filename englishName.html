@@ -18761,26 +18761,9 @@
         }
         var namesnum=nums[(Math.floor(Math.random()*(nums.length)))]%(unique1(names).length);
         var xingsnum=nums[(Math.floor(Math.random()*(nums.length)))]%(unique1(xings).length);
-        // console.log(namesnum);
-        // console.log(xingsnum);
-        // console.log("名字是："+unique1(names)[namesnum]+"姓是："+unique1(xings)[xingsnum]);
-        $("#name").text(unique1(names)[namesnum]+"  "+unique1(xings)[xingsnum] )
+        $("#name").html(unique1(names)[namesnum] + "  " + unique1(xings)[xingsnum])
     })
 
-
-
-    /* for(var i=0; i<info.length;i++){
-     	 var data=info[i].innerHTML；
-     	 var name1=data.split(' ')[0];
-     	 var name2==data.split(' ')[1];
-     arr.push(str;
-     var nn=Math.floor(Math.random()*10000);
-      nums.push(nn);
-     }
-     var {max,maxV,second,secondV}=f(nums);//ES的元素解构赋值
-     
-     
-     console.log(arr[maxV%3003]); */
 </script>
 
 </html>
